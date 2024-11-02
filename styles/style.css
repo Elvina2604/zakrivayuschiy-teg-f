@@ -24,7 +24,7 @@
   background-attachment: fixed;
   font-family: var(--main-font), sans-serif;
   /* font-weight: var(--font-weight-main); */
-  font-variation-settings:var(--font-weight-main);
+  font-variation-settings: var(--font-weight-main);
   inline-size: 100%;
   max-inline-size: var(--inline-size);
   margin-inline: auto;
@@ -357,7 +357,7 @@
 }
 
 .blur {
-  filter: blur(0.2rem);
+  filter: blur(0.2rem) grayscale(1);
 }
 
 .opacity {

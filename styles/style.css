@@ -23,7 +23,8 @@
   background-size: cover;
   background-attachment: fixed;
   font-family: var(--main-font), sans-serif;
-  font-weight: var(--font-weight-main);
+  /* font-weight: var(--font-weight-main); */
+  font-variation-settings:var(--font-weight-main);
   inline-size: 100%;
   max-inline-size: var(--inline-size);
   margin-inline: auto;
@@ -56,7 +57,7 @@
   margin-block-end: 20px;
 }
 
-.header__logo_title{
+.header__logo_title {
   font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
   text-align: center;
   margin-block-end: 25px;
@@ -225,7 +226,7 @@
   transition: box-shadow 0.3s ease;
   line-height: 90%;
   overflow: hidden;
-  cursor: pointer;  
+  cursor: pointer;
   min-inline-size: 130px;
 }
 

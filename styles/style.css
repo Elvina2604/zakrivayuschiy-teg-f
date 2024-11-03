@@ -223,7 +223,7 @@
   max-inline-size: 118px;
 }
 
-.container__button_text {
+.button {
   position: relative;
   display: flex;
   align-items: center;
@@ -236,26 +236,24 @@
   overflow: hidden;
   cursor: pointer;
   min-inline-size: 130px;
+  font-family: var(--accent-font);
+  font-size: 14px;
 }
 
 .button__text {
-  position: relative;
-  z-index: 1;
-  font-family: var(--accent-font);
-  font-size: 14px;
-  color: var(--button-text);
   mix-blend-mode: difference;
+  color: var(--button-text);
 }
 
-.container__button_text:focus {
+.button:focus {
   outline: none;
 }
 
-.container__button_text:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px 0 var(--accent-color);
 }
 
-.container__button_text::before {
+.button::before {
   content: '';
   position: absolute;
   top: 0;
@@ -268,7 +266,7 @@
   inline-size: 100%;
 }
 
-.container__button_text:hover::before {
+.button:hover::before {
   transform: translateX(0);
 }
 

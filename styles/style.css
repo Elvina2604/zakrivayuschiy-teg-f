@@ -42,7 +42,7 @@
   background-color: var(--bg-color);
   text-transform: uppercase;
   font-family: var(--accent-font), sans-serif;
-  padding: clamp(7.5rem, 7.148rem + 1.502vw, 8.5rem) clamp(0.875rem, -1.469rem + 10vw, 7.531rem) 23px;
+  padding: clamp(7.5rem, 7.148rem + 1.502vw, 8.5rem) clamp(0.875rem, -1.469rem + 10vw, 7.531rem) 20px;
 }
 
 /* .header__logo {
@@ -144,7 +144,7 @@
 .card {
   background-color: var(--bg-color);
   border: 2px solid var(--accent-color);
-  max-inline-size: 700px;
+  max-inline-size: clamp(375rem, 260.563rem + 488.263vw, 700rem);
   inline-size: 100%;
   /* max-block-size: clamp(47.5rem, 43.121rem + 18.685vw, 59.938rem); */
 }
@@ -152,10 +152,13 @@
 .card_title {
   font-size: 18px;
   padding: 5px 10px;
+  font-variation-settings: "wght" var(--font-weight-accent);
+  border-block-end: 2px solid var(--accent-color);
 }
 
 .container__card_image {
   position: relative;
+  height: 696px;
 }
 
 .card_label {
@@ -184,31 +187,36 @@
 }
 
 .card_image {
+  display: block;
   block-size: 100%;
   inline-size: 100%;
   object-fit: cover;
   object-position: center;
-  border: 2px 0 solid var(--accent-color);
+  aspect-ratio: 1 / 1;
 }
 
 .conrainer__card_subtitle {
   display: grid;
-  gap: 25px;
+  gap: 28px;
   font-size: 18px;
   padding: 25px;
   line-height: 21px;
+  border-block-start: 2px solid var(--accent-color);
 }
 
 .conteiner__button_like {
-  margin: 0 25px 23px;
+  margin: 0 25px 25px;
   display: flex;
   justify-content: end;
+  align-items: center;
   max-block-size: 38px;
+  gap: 5px;
 }
 
 .like-icon {
   block-size: 36px;
   inline-size: 39px;
+  margin: auto;
 }
 
 .card__like-button {
@@ -271,6 +279,7 @@
   justify-content: center;
   background-color: transparent;
   border: 2px solid transparent;
+  padding: 0;
 }
 
 .card__icon-button:focus {
@@ -288,7 +297,7 @@
   justify-content: center;
   margin-top: clamp(3.25rem, 3.339rem + -0.238vw, 3.125rem);
   margin-bottom: clamp(6.25rem, 6.116rem + 0.357vw, 6.438rem);
-  max-block-size: 51px;
+  /* max-block-size: 51px; */
   /* max-inline-size: 335px; */
 }
 
@@ -313,18 +322,19 @@
 
 /* Модальное окно*/
 
-.dialog {
+.dialog[open] {
   background: var(--bg-color);
   border: 2px solid var(--accent-color);
-  padding: 30px clamp(2.5rem, 2.946rem + -1.19vw, 1.875rem);
+  padding: 30px;
   inline-size: clamp(21.313rem, 20.777rem + 1.429vw, 22.063rem);
   text-transform: uppercase;
   line-height: 1.5;
+  inline-size: clamp(21.313rem, 21.048rem + 1.127vw, 22.063rem);
 }
 
 .container_dialog {
   display: flex;
-  gap: 12px;
+  gap: 20px;
   margin-bottom: 30px;
   justify-content: center;
   align-items: center;
@@ -338,8 +348,10 @@
 
 .button_dialog {
   text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
   inline-size: 100%;
-  padding: 12.5px 0;
+  padding: 10.2px 144.9px;
 }
 
 .dialog::backdrop {
@@ -381,18 +393,23 @@
 }
 
 @media (width < 768px) {
-  .card {
+  /* .card {
     max-inline-size: 375px;
-  }
+  } */
 
   .card_title {
     padding: 4px 10px 6px 10px;
   }
 
-  .section_save {
-    max-block-size: 84px;
-    /* max-inline-size: 335px; */
+  .card_label {
+    top: 23px;
+    right: 12px;
   }
+
+  .container__card_image {
+    height: 373px;
+  }
+  
 
   .button_save {
     block-size: 28px;
@@ -401,5 +418,14 @@
 
   .button__remember {
     flex-direction: column;
+    padding: 15.2px 18.5px;
+  }
+
+  .dialog[open] {
+    padding: 30px 39px;
+  }
+
+  .button_dialog {
+    padding: 10.2px 126.9px;
   }
 }

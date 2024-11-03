@@ -326,7 +326,6 @@
   background: var(--bg-color);
   border: 2px solid var(--accent-color);
   padding: 30px;
-  inline-size: clamp(21.313rem, 20.777rem + 1.429vw, 22.063rem);
   text-transform: uppercase;
   line-height: 1.5;
   inline-size: clamp(21.313rem, 21.048rem + 1.127vw, 22.063rem);

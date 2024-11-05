@@ -337,6 +337,14 @@
   align-items: center;
 }
 
+.button__text_dialog {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  text-transform: uppercase;
+  mix-blend-mode: difference;
+  color: var(--button-text);
+}
+
 .container_dialog .button_save {
   block-size: 39px;
   inline-size: 39px;
